@@ -1,0 +1,11 @@
+syntax = "proto3";
+package demo;
+
+import "demo/msg1.proto";
+
+
+message Msg2
+{
+  Msg1  a = 1;
+  int32 b = 2;
+}
