@@ -1,5 +1,3 @@
-# This starter workflow is for a CMake project running on multiple platforms. There is a different starter workflow if you just want a single platform.
-# See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-single-platform.yml
 name: GCC and Clang on Ubuntu
 
 on:
@@ -30,16 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-#    - name: Download and install Boost
-#      id: install-boost
-#      uses: MarkusJx/install-boost@v2.4.4
-#      with:
-#        boost_version: 1.73.0
-#
-#    - name: Setup protoc binary
-#      uses: zchee/setup-protoc@v1.2.0
-
-    - name: Setup protobuf library
+    - name: Setup dependencies
       run: |
         sudo apt install -y libprotobuf-dev protobuf-compiler libboost-all-dev
 

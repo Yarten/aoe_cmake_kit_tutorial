@@ -10,6 +10,16 @@ include(${aoe_cmake_kit}/main.cmake)
 
 # -------------------------------------------------------------
 # Create the aoe project
+
+if (DEFINED PROJECT_NAME)
+    message(
+        AUTHOR_WARNING
+        "!!!! HELLO THERE, DON'T PANIC !!!!
+You may see a warning from cmake saying that 'No project() command is present'.
+Though it is not a big problem, but you can avoid it, see demo 'project'."
+    )
+endif ()
+
 aoe_project(
     NAME         "AlmostFullExample"
     VERSION      "1.2.3"
