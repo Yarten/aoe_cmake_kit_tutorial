@@ -13,7 +13,7 @@ message(
     AUTHOR_WARNING
     "!!!! HELLO THERE, DON'T PANIC, JUST TIPS !!!!
 You may see a warning from cmake saying that 'No project() command is present'.
-Though it is not a big problem, but you can avoid it, see demo 'project'."
+It's not a big deal, but you can avoid it. Please see the demo 'project'."
 )
 
 aoe_project(

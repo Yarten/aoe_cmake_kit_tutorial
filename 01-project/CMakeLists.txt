@@ -45,6 +45,7 @@ aoe_project_complete()
 # (lazy people only)
 
 # You may see a cmake warning if you use it alone in your CMakeLists.txt.
+# You can avoid it by putting an aux command 'project(_)' near the top of the file, but after cmake_minimum_required().
 aoe_project(
     GIT_ROOT ${CMAKE_CURRENT_LIST_DIR}/..
     NAME_FROM_GIT
