@@ -6,8 +6,6 @@ project(ImportTheKit)
 include(FetchContent)
 FetchContent_Declare(aoe_cmake_kit GIT_REPOSITORY https://github.com/Yarten/aoe_cmake_kit.git GIT_TAG main)
 FetchContent_MakeAvailable(aoe_cmake_kit)
-FetchContent_GetProperties(aoe_cmake_kit SOURCE_DIR aoe_cmake_kit)
-include(${aoe_cmake_kit}/main.cmake)
 
 # You can also add the kit as your subrepository and then include it directly.
 
