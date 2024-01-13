@@ -28,8 +28,30 @@ aoe_add_library(lib2
     # Other3rdLibrary [... its components]
 )
 
-aoe_add_executable_test(lib2
+# -------------------------------------------------------------
+# Create an executable test target with one default source file.
+#
+# Default behaviors:
+#   - includes the 'include' directory under this file's root
+#   - add 'test/<target name>.cpp' as the source file,
+#     or 'test/<target name>-<case name>.cpp' as the source file if CASE is given
+#   - links the library target with the same name
+
+aoe_add_test(lib2
     DEPEND
     proto2 # lib2's private dependencies will not be propagated to this target,
            # if you need them, you should explicitly declare to depend on them.
 )
+aoe_add_test(lib2 CASE case1)
+
+# -------------------------------------------------------------
+# Create an executable example target with one default source file.
+#
+# Default behaviors:
+#   - includes the 'include' directory under this file's root
+#   - add 'example/<target name>.cpp' as the source file,
+#     or 'example/<target name>-<case name>.cpp' as the source file if CASE is given
+#   - links the library target with the same name
+
+aoe_add_example(lib2)
+aoe_add_example(lib2 CASE case1)

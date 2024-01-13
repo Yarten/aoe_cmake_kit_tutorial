@@ -8,7 +8,7 @@
 
 int main()
 {
-    demo::Lib2 lib2;
+    demo::Lib2 lib2("Test");
     lib2.sayHello();
 
     std::cout << std::endl << "proto2 is used in main():" << std::endl;
